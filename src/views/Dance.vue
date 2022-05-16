@@ -1,15 +1,15 @@
 <template>
   <div class="div_container">
-      <v-form ref="form" v-model="valid" lazy-validation>
-        <v-select v-model="select" :items="items" item-text="dance" item-value="code" label="Item"></v-select>
+    <v-form ref="form" v-model="valid" lazy-validation>
+      <v-select v-model="select" :items="items" item-text="dance" item-value="code" label="Select a Dance"></v-select>
 
-        <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">
-          Validate
-        </v-btn>
-        <v-btn :disabled="valid" color="error" class="mr-4" @click="stop">
-          Stop
-        </v-btn>
-      </v-form>
+      <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">
+        Validate
+      </v-btn>
+      <v-btn :disabled="valid" color="error" class="mr-4" @click="stop">
+        Stop
+      </v-btn>
+    </v-form>
   </div>
 </template>
 <script>
