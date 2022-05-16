@@ -1,6 +1,5 @@
 <template>
   <div class="div_container">
-    <v-card class="main_card" elevation="4" outlined>
       <v-form ref="form" v-model="valid" lazy-validation>
         <v-select v-model="select" :items="items" item-text="dance" item-value="code" label="Item"></v-select>
 
@@ -11,7 +10,6 @@
           Stop
         </v-btn>
       </v-form>
-    </v-card>
   </div>
 </template>
 <script>
@@ -59,5 +57,6 @@ export default {
   text-align: center;
   max-width: 30%;
   margin: auto;
+  margin-top: 20%;
 }
 </style>
