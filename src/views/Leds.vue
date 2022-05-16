@@ -3,14 +3,12 @@
     <v-card class="main_card" elevation="4" outlined>
       <h1>Leds Options :</h1>
       <div class="ledsOnOff">
-        <h3>Leds On/Off :</h3>
         <div class="btns">
           <v-btn color="green" plain elevation="4" v-on:click="pub('L.on')">ON</v-btn>
           <v-btn color="red" plain elevation="4" v-on:click="pub('L.off')">OFF</v-btn>
         </div>
       </div>
       <div class="ledsColor">
-        <h3>Leds Color :</h3>
         <div class="btns">
           <v-btn color="red" plain elevation="4">RED</v-btn>
           <v-btn color="blue" plain elevation="4">BLUE</v-btn>
@@ -38,9 +36,6 @@ export default {
 }
 .main_card {
   margin-top: 10%;
-}
-.card_content {
-  border: 3px solid red;
 }
 .ledsOnOff {
   display: flex;
