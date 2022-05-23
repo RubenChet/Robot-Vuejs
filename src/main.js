@@ -25,6 +25,7 @@ new Vue({
         clientId: 'mqttjs_3be2c321',
         username: '',
         password: '',
+        status: 'Not Connected',
       },
       subscription: {
         topic: 'topic/mqttx',
@@ -58,6 +59,7 @@ new Vue({
       }
       this.client.on('connect', () => {
         console.log('Connection succeeded!')
+        this.connection.status = 'Connected'
       })
       this.client.on('error', error => {
         console.log('Connection failed', error)
@@ -102,6 +104,7 @@ new Vue({
             connected: false,
           }
           console.log('Successfully disconnected!')
+          this.connection.status = 'Disconnected'
         } catch (error) {
           console.log('Disconnect failed', error.toString())
         }

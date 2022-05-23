@@ -1,8 +1,14 @@
 <template>
   <div class="div_container">
     <v-form ref="form" v-model="valid" lazy-validation>
-      <v-select v-model="select" :items="items" item-text="dance" item-value="code" label="Select a Preset"></v-select>
-
+      <v-select
+        v-model="select"
+        :items="items"
+        item-text="preset"
+        item-value="code"
+        item-cat="categorie"
+        label="Select a Preset"
+      ></v-select>
       <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">
         Validate
       </v-btn>
@@ -18,40 +24,40 @@ export default {
     valid: false,
     select: '',
     items: [
-      { dance: 'Salute', code: 'P.pose1' },
-      { dance: 'Gesticulate', code: 'P.pose2' },
-      { dance: 'Whatever', code: 'P.pose3' },
-      { dance: 'Hug', code: 'P.hug' },
-      { dance: 'Handshake', code: 'P.shankhand' },
-      { dance: 'Goodbye', code: 'P.goodbye' },
-      { dance: 'Talk 1', code: 'P.talk1' },
-      { dance: 'Talk 2', code: 'P.talk2' },
-      { dance: 'Talk 3', code: 'P.talk3' },
-      { dance: 'Talk 4', code: 'P.talk4' },
-      { dance: 'Talk 5', code: 'P.talk5' },
-      { dance: 'Talk 6', code: 'P.talk6' },
-      { dance: 'Talk 7', code: 'P.talk7' },
-      { dance: 'Talk 8', code: 'P.talk8' },
-      { dance: 'Nod', code: 'P.nod' },
-      { dance: 'Clap', code: 'P.applause' },
-      { dance: 'Scratch head', code: 'P.zhuatou' },
-      { dance: 'Walk right', code: 'P.guideright' },
-      { dance: 'Walk left', code: 'P.guideleft' },
-      { dance: 'Cute', code: 'P.cute' },
-      { dance: 'Fight', code: 'P.fendou' },
-      { dance: 'Grow', code: 'P.zhanggao' },
-      { dance: 'Swing arms', code: 'P.swingarm' },
-      { dance: 'Search', code: 'P.searching' },
-      { dance: 'Zone out', code: 'P.fadai' },
-      { dance: 'Survey', code: 'P.tiaowang' },
-      { dance: 'Grab', code: 'P.longzhuashou' },
-      { dance: 'Protect', code: 'P.baohu' },
-      { dance: 'Wonder', code: 'P.suprise' },
-      { dance: 'Guide', code: 'P.zhilu' },
-      { dance: 'Shy', code: 'P.shy' },
-      { dance: 'Conduct', code: 'P.command' },
-      { dance: 'End conducting', code: 'P.commandover' },
-      { dance: 'Walk', code: 'P.walk' },
+      { preset: 'Salute', code: 'P.pose1' },
+      { preset: 'Gesticulate', code: 'P.pose2' },
+      { preset: 'Whatever', code: 'P.pose3' },
+      { preset: 'Hug', code: 'P.hug' },
+      { preset: 'Handshake', code: 'P.shankhand' },
+      { preset: 'Goodbye', code: 'P.goodbye' },
+      { preset: 'Talk 1', code: 'P.talk1' },
+      { preset: 'Talk 2', code: 'P.talk2' },
+      { preset: 'Talk 3', code: 'P.talk3' },
+      { preset: 'Talk 4', code: 'P.talk4' },
+      { preset: 'Talk 5', code: 'P.talk5' },
+      { preset: 'Talk 6', code: 'P.talk6' },
+      { preset: 'Talk 7', code: 'P.talk7' },
+      { preset: 'Talk 8', code: 'P.talk8' },
+      { preset: 'Nod', code: 'P.nod' },
+      { preset: 'Clap', code: 'P.applause' },
+      { preset: 'Scratch head', code: 'P.zhuatou' },
+      { preset: 'Walk right', code: 'P.guideright' },
+      { preset: 'Walk left', code: 'P.guideleft' },
+      { preset: 'Cute', code: 'P.cute' },
+      { preset: 'Fight', code: 'P.fendou' },
+      { preset: 'Grow', code: 'P.zhanggao' },
+      { preset: 'Swing arms', code: 'P.swingarm' },
+      { preset: 'Search', code: 'P.searching' },
+      { preset: 'Zone out', code: 'P.fadai' },
+      { preset: 'Survey', code: 'P.tiaowang' },
+      { preset: 'Grab', code: 'P.longzhuashou' },
+      { preset: 'Protect', code: 'P.baohu' },
+      { preset: 'Wonder', code: 'P.suprise' },
+      { preset: 'Guide', code: 'P.zhilu' },
+      { preset: 'Shy', code: 'P.shy' },
+      { preset: 'Conduct', code: 'P.command' },
+      { preset: 'End conducting', code: 'P.commandover' },
+      { preset: 'Walk', code: 'P.walk' },
     ],
   }),
   methods: {
